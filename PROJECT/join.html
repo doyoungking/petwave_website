@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    header {
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 200px;
+    }
+
+    #main {
+        background-color: beige;
+
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .input-form {
+        max-width: 680px;
+
+        margin-top: 80px;
+        padding: 32px;
+
+        background: #fff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+
+    footer {
+        margin-top: 200px;
+    }
+
+    .nav-link {
+        color: orange;
+    }
+
+    #z {
+        position: absolute;
+        left: 1000px;
+        top: 50px;
+    }
+
+    #log {
+        position: fixed;
+        z-index: 1;
+        display: none;
+        width: 200%;
+        height: 100%;
+        background-color: rgb(22, 21, 21, 0.5);
+    }
+
+    #lg2 {
+        display: block;
+        background-color: rgb(248, 167, 15, 0.9);
+        width: 500px;
+        height: 400px;
+        margin-left: 15%;
+        margin-top: 6%;
+        text-align: center;
+
+    }
+
+    .btn-close {
+        margin-left: 79%;
+        margin-top: 6%;
+
+    }
+
+    #aa {
+        padding-top: 5%;
+        color: white;
+    }
+
+    #in {
+        width: 60%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+        margin-top: 30px;
+    }
+
+    #in2 {
+        width: 60%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    #btn {
+
+        margin-top: 50px;
+        color: white;
+
+    }
+
+    .nav-item {
+        font-family: "Noto Sans KR", sans-serif;
+        font-style: normal;
+    }
+</style>
+
+<body>
+    <div id="log">
+        <form>
+            <div id="lg2">
+                <button type="button" class="btn-close" aria-label="Close" onclick="close2()"></button>
+                <h1 id="aa">로그인</h1>
+                <input type="text" placeholder="아이디" id="in">
+                <input type="password" placeholder="비밀번호" id="in2">
+                <br>
+                <input type="submit" id="btn" value="로그인" class="btn btn-outline-warning btn-lg"><br>
+            </div>
+        </form>
+    </div>
+    <header>
+        <a href="http://192.168.0.83:5500/project/SmartWavePet.html"><img src="/pimg/로고 가로버전.png" width="400px"></a>
+        <ul id="z">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                <button type="button" class="btn btn-outline-secondary" onclick="lg()">LOGIN</button>
+                <button type="button" class="btn btn-outline-secondary">JOIN</button>
+            </div>
+        </ul>
+    </header>
+    <nav>
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet.html"
+                            class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_outline.html"
+                            class="nav-link">소개</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_guide.html"
+                            class="nav-link">애완동물 이해하기</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_petlist.html"
+                            class="nav-link">반려견보기</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_adopt.html"
+                            class="nav-link">입양신청</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_favor.html"
+                            class="nav-link">관심반려견</a></li>
+                    <li class="nav-item"><a href="http://192.168.0.83:5500/project/SmartWavePet_petsearch.html"
+                            class="nav-link">반려견 검색</a></li>
+
+                </ul>
+            </header>
+        </div>
+    </nav>
+    <div id="main">
+
+        <div class="container">
+            <div class="input-form-backgroud row">
+                <div class="input-form col-md-12 mx-auto">
+                    <h4 class="mb-3" style="text-align: center;">회원가입</h4>
+                    <form class="validation-form" novalidate>
+                        <div class="row">
+                            <div class="col-md-7 mb-3">
+                                <label for="number">id</label>
+                                <input type="text" class="form-control" id="nid" placeholder="" value="" required>
+                            </div>
+                            <br>
+                            <div class="col-md-7 mb-3">
+                                <label for="number">pw</label>
+                                <input type="password" class="form-control" id="password" placeholder="" value=""
+                                    required>
+                            </div>
+                            <div class="col-md-7 mb-3">
+                                <label for="name">이름</label>
+                                <input type="text" class="form-control" id="name" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    이름을 입력해주세요.
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-3">
+                                <label for="number">전화번호</label>
+                                <input type="text" class="form-control" id="PhoneNumber" placeholder="" value=""
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">이메일</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                            <div class="invalid-feedback">
+                                이메일을 입력해주세요.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">주소</label>
+                            <input type="text" class="form-control" id="address" placeholder="서울특별시 강남구" required>
+                            <div class="invalid-feedback">
+                                주소를 입력해주세요.
+                            </div>
+                        </div>
+
+
+
+
+                        <hr class="mb-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="aggrement" required>
+                            <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                        </div>
+                        <div class="mb-4"></div>
+                        <button id="bt" class="btn btn-primary btn-lg btn-block" type="submit"
+                            onclick="namechk()">회원가입</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">(주)웨이브펫</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">개발자:김도영</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">경기 수원시 팔달구 중부대로 104
+                            3F</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">사업자등록번호:1</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2024 PetWave, Inc</p>
+            </footer>
+        </div>
+
+
+
+    </footer>
+</body>
+<script>
+    function namechk() {
+        let nid = document.getElementById('nid')
+
+        let n = document.getElementById('name')
+
+        let p = document.getElementById('PhoneNumber')
+
+        let chk = document.getElementById('aggrement')
+
+        let btchk = document.getElementById('bt')
+        if (nid.value == '') {
+            alert('id는 필수 입력 항목입니다');
+            nid.focus();
+            return false;
+        } else if (n.value == '') {
+            alert('이름은 필수 입력 항목입니다');
+            n.focus();
+            return false;
+        } else if (p.value == '') {
+            alert('전화번호는 필수 입력 항목입니다');
+            p.focus();
+            return false;
+        } else if (chk.checked == false) {
+            alert('약관에 동의가 필요합니다')
+            return false;
+        }
+        else {
+            alert('신청되었습니다');
+            submit();
+        }
+
+
+
+    }
+    function lg() {
+        let a = document.getElementById('log')
+        if (a.style.display === 'none') {
+            a.style.display = 'block'
+        } else {
+            a.style.display = 'none'
+        }
+    }
+    function close2() {
+        let a = document.getElementById('log')
+        a.style.display = 'none'
+    }
+
+
+
+
+
+</script>
+
+</html>
